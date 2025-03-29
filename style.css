@@ -259,7 +259,7 @@ nav ul li a:hover::after{
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #0a0a0a;
     transition:background 0.5s;
 }
 
@@ -416,4 +416,33 @@ nav .fa-solid{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+.work-list .work {
+    transition: transform 0.3s ease-in-out;
+}
+.work-list .work:hover {
+    transform: scale(1.05);
+}
+.btn:hover, #showMoreBtn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+#typewriter {
+    font-size: 22px; /* Adjust size */
+    font-weight: bold;
+    color: #00FFFF; /* Neon Cyan */
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF;
+    font-family: 'Courier New', monospace;
+    border-right: 3px solid white; /* Blinking Cursor Effect */
+    padding-right: 5px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.8s step-end infinite alternate;
+}
+
+@keyframes blink {
+    from { border-color: white; }
+    to { border-color: transparent; }
 }

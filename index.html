@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- AOS CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal protfolo</title>
@@ -11,22 +14,29 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
+                <img src="images/kunal-logo-358-27850.png" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">protfolio</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>DATA SCIENTST</p>
-                <h1>Hi,I'm <span>Kunal</span><br>Tyagi From India</h1>
+                <p id="typewriter"></p> <!-- The animation goes here -->
+                <h1>Hi, I'm <span>Kunal</span><br>Tyagi from India</h1>
             </div>
+            
+            
+            <!-- <div class="header-text">
+                <p>DATA Scientist And AI Engineer</p>
+                <h1>Hi,I'm <span>Kunal</span><br>Tyagi from India</h1>
+            </div> -->
         </div>
+        
     </div>
     <!-- ______________about_____________ -->
     <div id="about">
@@ -37,9 +47,9 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim eveniet deserunt alias ipsum quis iure quas harum voluptatum debitis doloribus voluptate, vero voluptatibus dolor? Ut blanditiis incidunt voluptatem ipsum.
-                    </p>
+                    <p>I am a passionate Data Scientist and AI Engineer with expertise in deep learning, machine learning, and web development. 
+                        With hands-on experience in AI-driven projects, I aim to build intelligent solutions that make an impact.</p>
+                        
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -49,21 +59,21 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Data Scientist</span><br>Knowlodege about data</li>
-                            <li><span>Web Development </span><br>Web app Development</li>
-                            <li><span>Artificial Intelligence</span><br>knowledge about AI</li>
+                            <li><span>Data Science</span><br>Machine Learning, Deep Learning, Data Analysis</li>
+                            <li><span>Web Development</span><br>Flask, Django, React.js</li>
+                            <li><span>Artificial Intelligence</span><br>AI Chatbots, Computer Vision, NLP</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Jan2025-march2025 </span><br>AI Intern at Infosys Springboard</li>
+                            <li><span>Jan 2025 - March 2025</span><br>AI Intern at Infosys Springboard</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>pursuing </span><br>B.Tech  at Coer University</li>
-                            <li><span>2021 </span><br>Intermediate at Nalanda Public School</li>
-                            <li><span>2019</span><br>Metric at Nalanda Public School</li>
+                            <li><span>Pursuing</span><br>B.Tech in Computer Science at Coer University</li>
+                            <li><span>2021</span><br>Intermediate at Nalanda Public School</li>
+                            <li><span>2019</span><br>Matric at Nalanda Public School</li>
                         </ul>
                     </div>
                 </div>
@@ -78,29 +88,20 @@
             <div class="services-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
-                    <h2>Data Scientist</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, saepe, quae eos cum numquam dolorem et dolore quasi rem distinctio accusantium! Magni nam corporis laudantium possimus quas id expedita eveniet.
-                        
-                    </p>
+                    <h2>Data Science</h2>
+                    <p>Developing AI-driven solutions using machine learning, deep learning, and big data analytics.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop-simple"></i>
-                    <h2>Software Engineer</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, saepe, quae eos cum numquam dolorem et dolore quasi rem distinctio accusantium! Magni nam corporis laudantium possimus quas id expedita eveniet.
-
-                    </p>
+                    <h2>Software Engineering</h2>
+                    <p>Building scalable web applications and backend services with Python, Flask, and Django.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-brands fa-app-store"></i>
-                    <h2>Web Developer</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, saepe, quae eos cum numquam dolorem et dolore quasi rem distinctio accusantium! Magni nam corporis laudantium possimus quas id expedita eveniet.
-
-                    </p>
+                    <h2>Web Development</h2>
+                    <p>Creating interactive and responsive websites using modern web technologies.</p>
                     <a href="#">Learn more</a>
                 </div>
             </div>
@@ -108,54 +109,115 @@
         </div>
      </div>
      <!-- ------------------------------portfolio----------------- -->
-      <div id="portfolio">
+     <!-- <div id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
                     <img src="images/work-1.png">
                     <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from play store</p>
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <h3>Skin Disease Detection</h3>
+                        <p>AI-powered model to classify skin diseases using deep learning.</p>
+                        <a href="https://github.com/Kunaltyagi4906/ML-Projects"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="images/work-2.png">
                     <div class="layer">
-                        <h3>Music Media App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from play store</p>
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <h3>Delhi Metro Network Analysis</h3>
+                        <p>Graph-based analysis and route optimization for the Delhi Metro using NetworkX.</p>
+                        <a href="https://github.com/Kunaltyagi4906/Delhi-Metro-Optimization-and-Network-Analysis"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="images/work-3.png">
                     <div class="layer">
-                        <h3>OnlineApp</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from play store</p>
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <h3>AI-Powered Legal Document Summarization</h3>
+                        <p>AI-driven system for legal document summarization and risk assessment using LLMs.</p>
+                        <a href="https://github.com/Kunaltyagi4906/Advanced-AI-Driven-Legal-Document-Summarization-and-Risk-Assessment"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">see more</a>
+            <a href="https://github.com/kunaltyagi03" class="btn" target="_blank">See More</a>
         </div>
-      </div>
+    </div> -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Skin Disease Detection</h3>
+                        <p>AI-powered model to classify skin diseases using deep learning.</p>
+                        <a href="https://github.com/Kunaltyagi4906/ML-Projects"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Delhi Metro Network Analysis</h3>
+                        <p>Graph-based analysis and route optimization for the Delhi Metro using NetworkX.</p>
+                        <a href="https://github.com/Kunaltyagi4906/Delhi-Metro-Optimization-and-Network-Analysis"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>AI-Powered Legal Document Summarization</h3>
+                        <p>AI-driven system for legal document summarization and risk assessment using LLMs.</p>
+                        <a href="https://github.com/Kunaltyagi4906/Advanced-AI-Driven-Legal-Document-Summarization-and-Risk-Assessment"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <!-- Hidden Projects -->
+                <div class="work hidden">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>AI Tax Assistant</h3>
+                        <p>AI chatbot for automated tax filing, document parsing, and ITR suggestions.</p>
+                        <a href="https://github.com/Kunaltyagi4906/Advanced-AI-Driven-Legal-Document-Summarization-and-Risk-Assessment"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="work hidden">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Food Delivery Time Prediction</h3>
+                        <p>Machine learning model to predict food delivery time accurately.</p>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" id="seeMoreBtn" onclick="toggleProjects()">See More</button>
+        </div>
+    </div>
+    
+    
+    
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    
+    
+
       <!-- ---------------------------contact-------------------- -->
        <div id="contact">
         <div class="container">
             <div class="row">
              <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                <p><i class="fa-solid fa-paper-plane"></i>kunaltyagi4906@gmail.com</p>
                 <p> <i class="fa-solid fa-phone"></i>6395905755</p>
                 <div class="social-icon">
                     <a href="https://www.linkedin.com/in/kunal-tyagi-9b37182b0/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href=""><i class="fa-brands fa-twitter-square"></i></a>
                     <a href="https://www.instagram.com/kunaltyagi03?igsh=bDIzenVvZXFybTlu"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/share/15uA4QoGuG/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="mailto:kunaltyagi4906@gmail.com?subject=Inquiry&body=Hello Kunal, I would like to connect with you!">
+                        <i class="fa-solid fa-inbox"></i>
+                    </a>
+                    
+
                     
                 </div>
                 <a href="images/kunalresume (8).pdf" download class="btn btn2">Download CV</a>
@@ -179,8 +241,38 @@
             <p>copyright @ kunal. Made by <i class="fa-solid fa-heart"></i> ME</p>
         </div>
       </div>
+   <!-- --------------------animation on name------------ -->
+    <script>
+        const text = "DATA Scientist And AI Engineer";
+        let index = 0;
+        let isDeleting = false;
+        
+        function typeWriter() {
+            let element = document.getElementById("typewriter");
+        
+            if (!isDeleting) {
+                element.innerHTML = text.substring(0, index + 1);
+                index++;
+                if (index === text.length) {
+                    isDeleting = true;
+                    setTimeout(typeWriter, 1000); // Pause before erasing
+                } else {
+                    setTimeout(typeWriter, 100); // Typing speed
+                }
+            } else {
+                element.innerHTML = text.substring(0, index - 1);
+                index--;
+                if (index === 0) {
+                    isDeleting = false;
+                }
+                setTimeout(typeWriter, 50); // Erasing speed (faster than typing)
+            }
+        }
+        
+        window.onload = typeWriter;
+        
 
-
+    </script>
 
     <script>
         var tablinks =document.getElementsByClassName("tab-links");
@@ -201,6 +293,40 @@
         }
     </script>
     <script>
+        function toggleProjects() {
+            const hiddenProjects = document.querySelectorAll('.work.hidden');
+            const seeMoreBtn = document.getElementById('seeMoreBtn');
+            
+            hiddenProjects.forEach(project => {
+                if (project.style.display === "none" || project.style.display === "") {
+                    project.style.display = "block";  // Show hidden projects
+                } else {
+                    project.style.display = "none";  // Hide them again
+                }
+            });
+    
+            // Toggle button text
+            if (seeMoreBtn.innerText === "See More") {
+                seeMoreBtn.innerText = "See Less";
+            } else {
+                seeMoreBtn.innerText = "See More";
+            }
+        }
+    
+        // Ensure the hidden projects are initially hidden
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.work.hidden').forEach(project => {
+                project.style.display = "none";
+            });
+        });
+    </script>
+    
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
         var sidemenu=document.getElementById("sidemenu");
         function openmenu(){
             sidemenu.style.right="0";
@@ -210,6 +336,7 @@
         }
     </script>
     <script>
+        
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyMDc82yau3XVkn7_3jqYWApT16OJg7W7M21_vzsDu7qiHP6xFfqLADlqxbQPT0PZjO/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg=document.getElementById("msg")
@@ -226,5 +353,11 @@
             .catch(error => console.error('Error!', error.message))
         })
       </script>
+      <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+    AOS.init(); // Initialize AOS
+    </script>
+
 </body>
 </html>
