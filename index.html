@@ -28,6 +28,7 @@
             <div class="header-text">
                 <p id="typewriter"></p> <!-- The animation goes here -->
                 <h1>Hi, I'm <span>Kunal Tyagi</span><br>Btech Cse</h1>
+                <a href="#contact" class="btn hire-me-btn">Hire Me</a>
             </div>
             
             
@@ -43,7 +44,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/gibli (1).webp" alt="">
+                    <img src="images/about secton.jpg" alt="">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -143,33 +144,38 @@
     
     
 </script>  
-    <!-- _______________Services_________________________ -->
-     <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Data Science</h2>
-                    <p>Developing AI-driven solutions using machine learning, deep learning, and big data analytics.</p>
-                    <!-- <a href="#">Learn more</a> -->
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>Software Engineering</h2>
-                    <p>Building scalable web applications and backend services with Python, Flask, and Django.</p>
-                    <!-- <a href="hello kunal">Learn more</a> -->
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>Web Development</h2>
-                    <p>Creating interactive and responsive websites using modern web technologies.</p>
-                    <!-- <a href="#">Learn more</a> -->
-                </div>
+  <!-- _______________Services_________________________ -->
+<!-- _______________Services_________________________ -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+
+            <!-- AI & Machine Learning -->
+            <div>
+                <i class="fa-solid fa-brain"></i>
+                <h2>Artificial Intelligence</h2>
+                <p>Developing smart AI models for real-world tasks using Python, TensorFlow, Keras, and scikit-learn. Projects include skin disease detection, monkeypox classification, and heart disease prediction.</p>
+            </div>
+
+            <!-- Data Science & Analytics -->
+            <div>
+                <i class="fa-solid fa-chart-line"></i>
+                <h2>Data Science</h2>
+                <p>Skilled in data preprocessing, visualization, and model training using Pandas, NumPy, and Matplotlib. Experienced in building solutions for housing price prediction and food delivery time estimation.</p>
+            </div>
+
+            <!-- Full Stack Development -->
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Full Stack Development</h2>
+                <p>Building interactive web apps using Flask, Streamlit, HTML, CSS, and JavaScript. Implemented features like user authentication, file uploads, and live model predictions.</p>
             </div>
 
         </div>
-     </div>
+    </div>
+</div>
+
      
      <!-- ------------------------------portfolio----------------- -->
      <!-- <div id="portfolio">
@@ -274,8 +280,8 @@
                 <p> <i class="fa-solid fa-phone"></i>6395905755</p>
                 <div class="social-icon">
                     <a href="https://www.linkedin.com/in/kunal-tyagi-9b37182b0/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-                    <a href="https://www.instagram.com/kunaltyagi03?igsh=bDIzenVvZXFybTlu"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/KunalTy85207321?t=sI52ktiNADJhyBz8OACqeQ&s=08"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://wa.me/qr/B5MSUMBHYSRRD1"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="mailto:kunaltyagi4906@gmail.com?subject=Inquiry&body=Hello Kunal, I would like to connect with you!">
                         <i class="fa-solid fa-inbox"></i>
                     </a>
@@ -302,37 +308,39 @@
         </div>
       </div>
    <!-- --------------------animation on name------------ -->
-    <script>
-        const text = "DATA Scientist And AI Engineer";
-        let index = 0;
-        let isDeleting = false;
-        
-        function typeWriter() {
-            let element = document.getElementById("typewriter");
-        
-            if (!isDeleting) {
-                element.innerHTML = text.substring(0, index + 1);
-                index++;
-                if (index === text.length) {
-                    isDeleting = true;
-                    setTimeout(typeWriter, 1500); // Pause before erasing
-                } else {
-                    setTimeout(typeWriter, 120); // Typing speed
-                }
-            } else {
-                element.innerHTML = text.substring(0, index - 1);
-                index--;
-                if (index === 0) {
-                    isDeleting = false;
-                }
-                setTimeout(typeWriter, 50); // Erasing speed (faster than typing)
-            }
-        }
-        
-        window.onload = typeWriter;
-        
+   <script>
+    const texts = ["Data Scientist", "AI Engineer", "Web Developer", "ML Explorer"];
+    let index = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-    </script>
+    function typeWriter() {
+        let element = document.getElementById("typewriter");
+        let currentText = texts[index];
+
+        if (!isDeleting) {
+            element.innerHTML = currentText.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(typeWriter, 1200); // pause at full word
+            } else {
+                setTimeout(typeWriter, 120); // typing speed
+            }
+        } else {
+            element.innerHTML = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % texts.length;
+            }
+            setTimeout(typeWriter, 50); // deleting speed
+        }
+    }
+
+    window.onload = typeWriter;
+</script>
+
 
     <script>
         var tablinks =document.getElementsByClassName("tab-links");
